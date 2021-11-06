@@ -1,0 +1,34 @@
+#App {
+  height: 100%;
+  video {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  #login-section {
+    position: absolute;
+    top: 28%;
+    width: 60%;
+    left: 5%;
+    #login-info {
+      position: relative;
+      text-align: left;
+      #login-title {
+        color: linen;
+        font-weight: bolder;
+        font-size: 65px;
+      }
+      #login-title-description {
+        color: linen;
+        font-weight: bolder;
+      }
+      p {
+        color: linen;
+      }
+    }
+    #btnJoin {
+      font-weight: bold;
+    }
+  }
+}
