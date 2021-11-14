@@ -2370,7 +2370,7 @@ module.exports = {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "#Main {\n  height: 100%; }\n  #Main video {\n    position: absolute;\n    width: 100%;\n    height: 100vh;\n    object-fit: cover; }\n  #Main #login-section {\n    position: absolute;\n    top: 28%;\n    width: 60%;\n    left: 5%; }\n    #Main #login-section #login-info {\n      position: relative;\n      text-align: left; }\n      #Main #login-section #login-info #login-title {\n        color: linen;\n        font-weight: bolder;\n        font-size: 65px; }\n      #Main #login-section #login-info #login-title-description {\n        color: linen;\n        font-weight: bolder; }\n      #Main #login-section #login-info p {\n        color: linen; }\n    #Main #login-section #btnJoin {\n      font-weight: bold; }\n", ""]);
+exports.push([module.i, "#Main {\n  height: 100%; }\n  #Main video {\n    position: absolute;\n    width: 100%;\n    height: 100vh;\n    object-fit: cover; }\n  #Main #main-section {\n    position: absolute;\n    top: 28%;\n    width: 60%;\n    left: 5%; }\n    #Main #main-section #main-info {\n      position: relative;\n      text-align: left; }\n      #Main #main-section #main-info #main-title {\n        color: linen;\n        font-weight: bolder;\n        font-size: 65px; }\n      #Main #main-section #main-info #main-title-description {\n        color: linen;\n        font-weight: bolder; }\n      #Main #main-section #main-info p {\n        color: linen; }\n    #Main #main-section #btnJoin {\n      font-weight: bold; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -37034,7 +37034,9 @@ var Login = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "Login"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Login \uD398\uC774\uC9C0"));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "login-section"
+      }));
     }
   }]);
 
@@ -37123,13 +37125,13 @@ var Main = /*#__PURE__*/function (_React$Component) {
         src: _public_assets_backGround_mp4__WEBPACK_IMPORTED_MODULE_3__["default"],
         type: "video/mp4"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "login-section"
+        id: "main-section"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "login-info"
+        id: "main-info"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-        id: "login-title"
+        id: "main-title"
       }, "Welcome to Travler"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-        id: "login-title-description"
+        id: "main-title-description"
       }, "More Fun, More Interested"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Include photos taken while traveling around the world.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Record your memories.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/login"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {

@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Main from './components/Main';
 import Login from './components/Login';
 
+import './App.scss';
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);

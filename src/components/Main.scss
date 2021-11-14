@@ -6,20 +6,20 @@
     height: 100vh;
     object-fit: cover;
   }
-  #login-section {
+  #main-section {
     position: absolute;
     top: 28%;
     width: 60%;
     left: 5%;
-    #login-info {
+    #main-info {
       position: relative;
       text-align: left;
-      #login-title {
+      #main-title {
         color: linen;
         font-weight: bolder;
         font-size: 65px;
       }
-      #login-title-description {
+      #main-title-description {
         color: linen;
         font-weight: bolder;
       }
