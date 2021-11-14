@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import LoginImage from '../../public/assets/login.jpg';
 import './Login.scss';
@@ -37,7 +38,9 @@ export default class Login extends React.Component {
                 <input type="password" className="form-control" placeholder="Password"></input>
               </div>
               <div id="login-forgot">
-                <p>Forgot your Password?</p>
+                <Link to="/forgot">
+                  <p>Forgot your Password?</p>
+                </Link>
               </div>
               <div id="login-button">
                 <button type="submit" className="btn btn-info" id="btnLogin">SIGN IN</button>

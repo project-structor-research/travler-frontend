@@ -79,10 +79,16 @@
           margin-left: 15%;
           margin-right: 15%;
           text-align: right;
-          p {
-            color: #818181;
-            font-weight: bolder;
-            font-size: 12px;
+          a {
+            text-decoration-line: none;
+            p {
+              color: #818181;
+              font-weight: bolder;
+              font-size: 12px;
+            }
+          }
+          :hover {
+            color: #8E8E8E;
           }
         }
         #login-button {
