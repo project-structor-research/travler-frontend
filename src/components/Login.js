@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 import LoginImage from '../../public/assets/login.jpg';
@@ -7,10 +8,36 @@ import './Login.scss';
 export default class Login extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      email: "",
+      password: ""
+    }
+    this.inputHandler = this.inputHandler.bind(this);
+    this.formHandler = this.formHandler.bind(this);
   }
 
-  handleSubmit() {
-    console.log("qwe");
+  formHandler(e) {
+    e.preventDefault();
+    axios.get('/api/hello', { 
+      params: { 
+        email: this.state.email,
+        password: this.state.password
+      } 
+    })
+    .then(function(response) {
+      console.log(response);
+    }.bind(this))
+    .catch(function(error) { 
+      console.log(error);
+    });
+  }
+
+  inputHandler(e) {
+    console.log(e.target.name + " : " + e.target.value);
+    this.setState({
+      [e.target.name] : e.target.value
+    });
   }
 
   render() {
@@ -30,12 +57,27 @@ export default class Login extends React.Component {
               <h2>Traveler</h2>
               <p>use your email account</p>
             </div>
-            <form onSubmit={this.handleSubmit.bind(this)}>
+            <form 
+              onSubmit={this.formHandler}
+              action="/api/hello" 
+              method="GET">
               <div id="login-email">
-                <input type="text" className="form-control" placeholder="Email"></input>
+                <input 
+                  type="text" 
+                  className="form-control" 
+                  placeholder="Email"
+                  name="email"
+                  onChange={this.inputHandler}>
+                </input>
               </div>
               <div id="login-password">
-                <input type="password" className="form-control" placeholder="Password"></input>
+                <input 
+                  type="password" 
+                  className="form-control" 
+                  placeholder="Password"
+                  name="password"
+                  onChange={this.inputFormHandler}>
+                </input>
               </div>
               <div id="login-forgot">
                 <Link to="/forgot">

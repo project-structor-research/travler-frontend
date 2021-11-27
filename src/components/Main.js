@@ -10,9 +10,9 @@ export default class Main extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      message: null
-    }
+    // this.state = {
+    //   message: null
+    // }
   }
   render() {
     return (
@@ -35,16 +35,16 @@ export default class Main extends React.Component {
     );
   }
   componentDidMount() {
-    axios.get('/api/hello', { 
-      // params: { id: 1 } 
-    })
-    .then(function(response) {
-      this.setState({
-        message: response.data
-      })
-    }.bind(this))
-    .catch(function(error) { 
-      console.log(error);
-    });
+    // axios.get('/api/hello', { 
+    //   // params: { id: 1 } 
+    // })
+    // .then(function(response) {
+    //   this.setState({
+    //     message: response.data
+    //   })
+    // }.bind(this))
+    // .catch(function(error) { 
+    //   console.log(error);
+    // });
   }
 }
