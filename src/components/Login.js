@@ -14,22 +14,18 @@ export default class Login extends React.Component {
       password: ""
     }
     this.inputHandler = this.inputHandler.bind(this);
-    this.formHandler = this.formHandler.bind(this);
+    this.loginHandler = this.loginHandler.bind(this);
   }
 
-  formHandler(e) {
-    e.preventDefault();
+  loginHandler() {
     axios.get('/api/hello', { 
       params: { 
         email: this.state.email,
         password: this.state.password
       } 
     })
-    .then(function(response) {
+    .then(response => {
       console.log(response);
-    }.bind(this))
-    .catch(function(error) { 
-      console.log(error);
     });
   }
 
@@ -57,26 +53,12 @@ export default class Login extends React.Component {
               <h2>Traveler</h2>
               <p>use your email account</p>
             </div>
-            <form 
-              onSubmit={this.formHandler}
-              action="/api/hello" 
-              method="GET">
+            <div id="login-account">
               <div id="login-email">
-                <input 
-                  type="text" 
-                  className="form-control" 
-                  placeholder="Email"
-                  name="email"
-                  onChange={this.inputHandler}>
-                </input>
+                <input type="text" className="form-control" placeholder="Email" name="email" onChange={this.inputHandler}></input>
               </div>
               <div id="login-password">
-                <input 
-                  type="password" 
-                  className="form-control" 
-                  placeholder="Password"
-                  name="password"
-                  onChange={this.inputFormHandler}>
+                <input type="password" className="form-control" placeholder="Password" name="password" onChange={this.inputHandler}>
                 </input>
               </div>
               <div id="login-forgot">
@@ -85,9 +67,9 @@ export default class Login extends React.Component {
                 </Link>
               </div>
               <div id="login-button">
-                <button type="submit" className="btn btn-info" id="btnLogin">SIGN IN</button>
+                <button className="btn btn-info" id="btnLogin" onClick={this.loginHandler}>SIGN IN</button>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
