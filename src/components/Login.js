@@ -24,7 +24,7 @@ const Login = () => {
     })
     .then(response => {
       console.log(response);
-      history.push("/travel");
+      // history.push("/travel");
     });
   }
 

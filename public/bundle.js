@@ -38366,8 +38366,7 @@ var Login = function Login() {
                   password: password
                 }
               }).then(function (response) {
-                console.log(response);
-                history.push("/travel");
+                console.log(response); // history.push("/travel");
               });
 
             case 2:
