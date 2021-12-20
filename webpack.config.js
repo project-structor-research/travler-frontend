@@ -56,7 +56,12 @@ module.exports = {
     compress: true,
     historyApiFallback: true,
     proxy: {
-      '/**': {
+      '/api': {
+        target: 'http://localhost:8080',
+        secure: false,
+        changeOrigin: true
+      },
+      '/authenticate': {
         target: 'http://localhost:8080',
         secure: false,
         changeOrigin: true
